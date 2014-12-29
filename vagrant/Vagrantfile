@@ -4,7 +4,6 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	# Every Vagrant virtual environment requires a box to build off of.
 	config.vm.box = "hashicorp/precise32"
-    #config.vm.box = "ubuntu-12.04-amd64"
 	
 	# Create a forwarded port mapping which allows access to a specific port
 	# within the machine from a port on the host machine. In the example below,
@@ -13,9 +12,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	config.vm.network "forwarded_port", guest: 6379, host: 6379, auto_correct: true
  
 	# Set virtual machine memory size
-    config.vm.provider :virtualbox do |vbox|
-    vbox.customize ["modifyvm", :id, "--memory", 1024]
-  end 
+	config.vm.provider "virtualbox" do |v|
+      v.customize ["modifyvm", :id, "--memory", "1024"]
+      v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    end 
  
 	config.vm.provision :shell, :path=> "bootstrap.sh"
  
