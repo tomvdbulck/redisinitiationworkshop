@@ -22,4 +22,3 @@ sudo cp /vagrant/redis.conf /etc/redis/6379.conf
 sudo cp /vagrant/redis.init.d /etc/init.d/redis_6379
 
 sudo update-rc.d redis_6379 defaults
-/etc/init.d/redis_6379 start
