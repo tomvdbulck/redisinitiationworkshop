@@ -1,0 +1,5 @@
+http://stackoverflow.com/questions/7888880/what-is-redis-and-what-do-i-use-it-for
+http://highscalability.com/blog/2011/7/6/11-common-web-use-cases-solved-in-redis.html
+
+http://redis.io/commands/zadd
+voorbeeldje van add met score en high-score sorten
