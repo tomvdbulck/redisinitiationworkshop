@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import redis.clients.jedis.Jedis;
 
-public class RedisTest {
+public class RedisBasicTest {
 
 	Jedis jedis;
 
