@@ -18,7 +18,9 @@ sudo mkdir -p /var/redis/6379
 sudo useradd --system --home-dir /var/redis redis 
 sudo chown -R redis.redis /var/redis
 
-sudo cp /vagrant/redis.conf /etc/redis/6379.conf
-sudo cp /vagrant/redis.init.d /etc/init.d/redis_6379
+cp /vagrant/redis.conf /etc/redis/6379.conf
+cp /vagrant/redis.init.d /etc/init.d/redis_6379
 
-sudo update-rc.d redis_6379 defaults
+update-rc.d redis_6379 defaults
+
+chmod +x /etc/init.d/redis_6379
